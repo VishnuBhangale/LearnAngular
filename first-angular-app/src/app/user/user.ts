@@ -1,15 +1,12 @@
 import { Interpolation } from '@angular/compiler';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Users } from './user.model';
 // type users={
 //   id: string;
 //     name: string;
 //    avatar: string;
 // }
-interface Users{
-     id: string;
-    name: string;
-    avatar: string;
-}
+
 @Component({
   selector: 'app-user',
   templateUrl: './user.html',
@@ -24,6 +21,7 @@ export class User {
   //   name: string;
   //   avatar: string;
   // }
+  @Input() selected!:boolean;;
   @Input() user!: Users;
   
   @Output() select = new EventEmitter<string>();
