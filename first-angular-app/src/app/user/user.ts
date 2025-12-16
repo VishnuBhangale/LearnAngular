@@ -1,4 +1,3 @@
-import { Interpolation } from '@angular/compiler';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Users } from './user.model';
 // type users={
@@ -11,6 +10,7 @@ import { Users } from './user.model';
   selector: 'app-user',
   templateUrl: './user.html',
   styleUrls: ['./user.css'],
+  standalone: false
 })
 export class User {
   // @Input() id!: string;
